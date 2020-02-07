@@ -1,9 +1,9 @@
 {
   "version": 1,
   "projects": {
-    "ui": {
-      "root": "libs/ui",
-      "sourceRoot": "libs/ui/src",
+    "st-ui": {
+      "root": "libs/st-ui",
+      "sourceRoot": "libs/st-ui/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -11,19 +11,19 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/ui/.eslintrc",
+            "config": "libs/st-ui/.eslintrc",
             "tsConfig": [
-              "libs/ui/tsconfig.lib.json",
-              "libs/ui/tsconfig.spec.json"
+              "libs/st-ui/tsconfig.lib.json",
+              "libs/st-ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+            "exclude": ["**/node_modules/**", "!libs/st-ui/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/ui/jest.config.js",
-            "tsConfig": "libs/ui/tsconfig.spec.json"
+            "jestConfig": "libs/st-ui/jest.config.js",
+            "tsConfig": "libs/st-ui/tsconfig.spec.json"
           }
         }
       }
