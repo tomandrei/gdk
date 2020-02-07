@@ -29,19 +29,24 @@
   "dependencies": {},
   "devDependencies": {
     "@nrwl/angular": "^8.12.2",
+    "@nrwl/eslint-plugin-nx": "^8.12.2",
+    "@nrwl/jest": "8.12.2",
     "@nrwl/react": "^8.12.2",
     "@nrwl/workspace": "8.12.2",
+    "@stencil/core": "^1.8.4",
+    "@types/jest": "24.0.9",
     "@types/node": "~8.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
     "dotenv": "6.2.0",
     "eslint": "6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "jest": "24.1.0",
+    "jest-preset-angular": "7.0.0",
     "prettier": "1.18.2",
+    "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.5.3",
-    "@nrwl/jest": "8.12.2",
-    "jest": "24.1.0",
-    "@types/jest": "24.0.9",
-    "ts-jest": "24.0.0",
-    "jest-preset-angular": "7.0.0"
+    "typescript": "~3.5.3"
   }
 }
