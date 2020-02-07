@@ -1,6 +1,92 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "ui": {
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/ui/.eslintrc",
+            "tsConfig": [
+              "libs/ui/tsconfig.lib.json",
+              "libs/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "tsConfig": "libs/ui/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "ng-ui": {
+      "projectType": "library",
+      "root": "libs/ng-ui",
+      "sourceRoot": "libs/ng-ui/src",
+      "prefix": "gds",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ng-ui/tsconfig.lib.json",
+              "libs/ng-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ng-ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ng-ui/jest.config.js",
+            "tsConfig": "libs/ng-ui/tsconfig.spec.json",
+            "setupFile": "libs/ng-ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ra-ui": {
+      "root": "libs/ra-ui",
+      "sourceRoot": "libs/ra-ui/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/ra-ui/.eslintrc",
+            "tsConfig": [
+              "libs/ra-ui/tsconfig.lib.json",
+              "libs/ra-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ra-ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ra-ui/jest.config.js",
+            "tsConfig": "libs/ra-ui/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   },

@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@gds/ui": ["libs/ui/src/index.ts"],
+      "@gds/ng-ui": ["libs/ng-ui/src/index.ts"],
+      "@gds/ra-ui": ["libs/ra-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

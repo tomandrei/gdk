@@ -10,5 +10,15 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "ui": {
+      "tags": []
+    },
+    "ng-ui": {
+      "tags": []
+    },
+    "ra-ui": {
+      "tags": []
+    }
+  }
 }
