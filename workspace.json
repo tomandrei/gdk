@@ -25,6 +25,28 @@
             "jestConfig": "libs/st-ui/jest.config.js",
             "tsConfig": "libs/st-ui/tsconfig.spec.json"
           }
+        },
+        "build": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "parallel": false,
+            "commands": [
+              {
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/build-st-ui"
+              }
+            ]
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "parallel": false,
+            "commands": [
+              {
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/serve-st-ui"
+              }
+            ]
+          }
         }
       }
     },

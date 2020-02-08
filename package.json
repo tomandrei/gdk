@@ -34,8 +34,8 @@
     "@nrwl/react": "^8.12.2",
     "@nrwl/workspace": "8.12.2",
     "@stencil/core": "^1.8.4",
-    "@types/jest": "24.0.9",
-    "@types/node": "~8.9.4",
+    "@types/jest": "24.0.25",
+    "@types/node": "~12.12.22",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
     "dotenv": "6.2.0",
@@ -45,7 +45,7 @@
     "jest-preset-angular": "7.0.0",
     "prettier": "1.18.2",
     "ts-jest": "24.0.0",
-    "ts-node": "~7.0.0",
+    "ts-node": "~8.5.4",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
   }
