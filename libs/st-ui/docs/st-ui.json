@@ -1,0 +1,76 @@
+{
+  "timestamp": "2020-02-08T15:28:16",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.7",
+    "typescriptVersion": "3.7.5"
+  },
+  "components": [
+    {
+      "filePath": "src/components/my-component/my-component.tsx",
+      "encapsulation": "shadow",
+      "tag": "my-component",
+      "readme": "# my-component\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "first",
+          "type": "string",
+          "mutable": false,
+          "attr": "first",
+          "reflectToAttr": false,
+          "docs": "The first name",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "mutable": false,
+          "attr": "last",
+          "reflectToAttr": false,
+          "docs": "The last name",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "middle",
+          "type": "string",
+          "mutable": false,
+          "attr": "middle",
+          "reflectToAttr": false,
+          "docs": "The middle name",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}

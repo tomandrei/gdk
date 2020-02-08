@@ -16,4 +16,4 @@
 
 ----------------------------------------------
 
-*Built with [StencilJS](https://stenciljs.com/)*
+Geekster Development Kit

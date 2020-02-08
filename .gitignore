@@ -7,6 +7,7 @@
 
 # stenciljs
 /libs/st-ui/www/
+/libs/st-ui/dist/
 /libs/st-ui/.stencil/
 
 # dependencies

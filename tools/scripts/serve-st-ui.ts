@@ -7,10 +7,8 @@ const stencilDir = join(rootDir, 'libs', 'st-ui');
 
 (() => {
   process.chdir(stencilDir);
-  const argv = process.argv.slice(2);
-  const args = argv.includes('build') ? ['build', '--docs'] : ['build', '--dev', '--watch', '--serve'];
 
-  const child = spawn('stencil', args);
+  const child = spawn('stencil', ['build', '--dev', '--watch', '--serve']);
 
   //Print stdout to screen
   child.stdout.on('data', function (data) {   process.stdout.write(data.toString());  });

@@ -3,15 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title>Geekster Development Kit</title>
+
+  <link rel="import" href="build/my-component.html" id="my-component" />
 
   <script type="module" src="/build/st-ui.esm.js"></script>
   <script nomodule src="/build/st-ui.js"></script>
 
+  <script>
+    window.onload = function() {
+      let elements = document.getElementsByTagName('*'), i;
+      const fragment = (el, file) => {
+        var localTest = /^(?:file):/,
+          xmlhttp = new XMLHttpRequest(),
+          status = 0;
+
+        xmlhttp.onreadystatechange = () => {
+          if (xmlhttp.readyState == 4) {
+            status = xmlhttp.status;
+          }
+          if (localTest.test(location.href) && xmlhttp.responseText) {
+            status = 200;
+          }
+          if (xmlhttp.readyState == 4 && status == 200) {
+            el.outerHTML = xmlhttp.responseText;
+          }
+        }
+
+        try { 
+          xmlhttp.open("GET", `build/${file}.html`, true);
+          xmlhttp.send();
+        } catch(err) {
+          console.log(err);
+        }
+      }
+
+      for (i in elements) {
+        if (elements[i].hasAttribute && elements[i].hasAttribute('data-include')) {
+          fragment(elements[i], elements[i].getAttribute('data-include'));
+        }
+      }
+    }
+  </script>
+
 </head>
 <body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
+  <div data-include="my-component"></div> 
 </body>
 </html>

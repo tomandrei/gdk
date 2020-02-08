@@ -32,7 +32,10 @@
             "parallel": false,
             "commands": [
               {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/st-scripts build"
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/build-st-ui"
+              },
+              {
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/dist-st-ui"
               }
             ]
           }
@@ -43,7 +46,7 @@
             "parallel": false,
             "commands": [
               {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/st-scripts serve"
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/serve-st-ui"
               }
             ]
           }
