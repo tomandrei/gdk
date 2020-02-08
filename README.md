@@ -1,51 +1,23 @@
 # Gdk
 
-This project was generated using [Nx](https://nx.dev).
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
-
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are some plugins which you can add to your workspace:
-
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+Geekster Development Kit is a development toolkit using nx monorepo, stenciljs, storybook, angular, react etc.
 
 ## Generate an application
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
+Run `nx g @nrwl/react:app my-app` to generate a react application.
+Run `nx g @nrwl/angular:app my-app` to generate an angular application.
 
 ## Generate a library
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Run `nx g @nrwl/react:lib my-lib` to generate a react library.
+Run `nx g @nrwl/angular:lib my-lib` to generate an angular library.
 
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are sharable across libraries and applications. They can be imported from `@gdk/mylib`.
+They can be imported from `@gdk/mylib`.
 
 ## Development server
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the app source files.
+Run `nx serve st-ui` for a stencil dev server. Navigate to http://localhost:3300/. The app will automatically reload if you change any of the st-ui source files.
 
 ## Code scaffolding
 
@@ -54,6 +26,13 @@ Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new
 ## Build
 
 Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `nx build st-ui` to build the web components. The build artifacts will be stored in the `dist/` directory.
+
+## Running linter
+
+Run `nx lint my-app` to lint my-app.
+
+Run `nx affected:lint` to execute the lint affected by a change.
 
 ## Running unit tests
 
@@ -74,3 +53,4 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+Visit the [Stencil Documentation](https://stenciljs.com) to learn more.
