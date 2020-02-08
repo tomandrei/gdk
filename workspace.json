@@ -32,7 +32,7 @@
             "parallel": false,
             "commands": [
               {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/build-st-ui"
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/st-scripts build"
               }
             ]
           }
@@ -43,7 +43,7 @@
             "parallel": false,
             "commands": [
               {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/serve-st-ui"
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/st-scripts serve"
               }
             ]
           }
@@ -54,7 +54,7 @@
       "projectType": "library",
       "root": "libs/ng-ui",
       "sourceRoot": "libs/ng-ui/src",
-      "prefix": "gds",
+      "prefix": "gdk",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",

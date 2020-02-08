@@ -1,5 +1,5 @@
 {
-  "npmScope": "gds",
+  "npmScope": "gdk",
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": {
