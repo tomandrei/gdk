@@ -19,7 +19,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gdk/ui": ["libs/ui/src/index.ts"],
+      "@gdk/st-ui": ["libs/st-ui/src/index.ts"],
       "@gdk/ng-ui": ["libs/ng-ui/src/index.ts"],
       "@gdk/ra-ui": ["libs/ra-ui/src/index.ts"]
     }

@@ -16,7 +16,10 @@
               "libs/st-ui/tsconfig.lib.json",
               "libs/st-ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/st-ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/st-ui/**"
+            ]
           }
         },
         "test": {
@@ -33,9 +36,6 @@
             "commands": [
               {
                 "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/build-st-ui"
-              },
-              {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/dist-st-ui"
               }
             ]
           }
@@ -47,6 +47,17 @@
             "commands": [
               {
                 "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/serve-st-ui"
+              }
+            ]
+          }
+        },
+        "package": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "parallel": false,
+            "commands": [
+              {
+                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/package-st-ui"
               }
             ]
           }
@@ -66,7 +77,10 @@
               "libs/ng-ui/tsconfig.lib.json",
               "libs/ng-ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ng-ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ng-ui/**"
+            ]
           }
         },
         "test": {
@@ -75,6 +89,36 @@
             "jestConfig": "libs/ng-ui/jest.config.js",
             "tsConfig": "libs/ng-ui/tsconfig.spec.json",
             "setupFile": "libs/ng-ui/src/test-setup.ts"
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/ng-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/ng-ui",
+            "config": {
+              "configFolder": "libs/ng-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
           }
         }
       },
@@ -99,7 +143,10 @@
               "libs/ra-ui/tsconfig.lib.json",
               "libs/ra-ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ra-ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ra-ui/**"
+            ]
           }
         },
         "test": {
@@ -107,6 +154,100 @@
           "options": {
             "jestConfig": "libs/ra-ui/jest.config.js",
             "tsConfig": "libs/ra-ui/tsconfig.spec.json"
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/ra-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/ra-ui",
+            "config": {
+              "configFolder": "libs/ra-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "ra-ui-e2e": {
+      "root": "apps/ra-ui-e2e",
+      "sourceRoot": "apps/ra-ui-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ra-ui-e2e/cypress.json",
+            "tsConfig": "apps/ra-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ra-ui:storybook"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ra-ui:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ra-ui-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ra-ui-e2e/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-ui-e2e": {
+      "root": "apps/ng-ui-e2e",
+      "sourceRoot": "apps/ng-ui-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ng-ui-e2e/cypress.json",
+            "tsConfig": "apps/ng-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ng-ui:storybook"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-ui:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ng-ui-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ng-ui-e2e/**"
+            ]
           }
         }
       }
