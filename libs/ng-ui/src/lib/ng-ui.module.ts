@@ -4,6 +4,7 @@ import { MyComponent } from './ng-ui';
 
 @NgModule({
   declarations: [MyComponent],
-  imports: [CommonModule]
+  imports: [CommonModule],
+  exports: [MyComponent]
 })
 export class NgUiModule {}

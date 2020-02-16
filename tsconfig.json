@@ -19,7 +19,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gdk/st-ui": ["libs/st-ui/src/index.ts"],
+      "@gdk/st-ui": ["dist/libs/st-ui"],
+      "@gdk/st-ui/loader": ["dist/libs/st-ui/loader"],
       "@gdk/ng-ui": ["libs/ng-ui/src/index.ts"],
       "@gdk/ra-ui": ["libs/ra-ui/src/index.ts"]
     }
