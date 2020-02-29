@@ -12,31 +12,23 @@
   },
   "projects": {
     "st-ui": {
-      "tags": ["st"]
+      "tags": ["st-ui"]
     },
     "ng-ui": {
-      "tags": ["ng"],
-      "implicitDependencies": [
-        "st"
-      ]
+      "tags": ["ng-ui"],
+      "implicitDependencies": ["st-ui"]
     },
     "ra-ui": {
-      "tags": ["ra"],
-      "implicitDependencies": [
-        "st"
-      ]
+      "tags": ["ra-ui"],
+      "implicitDependencies": ["st-ui"]
     },
     "ra-ui-e2e": {
-      "tags": ["e2e"],
-      "implicitDependencies": [
-        "ra-ui", "st-ui"
-      ]
+      "tags": ["ra-ui-e2e"],
+      "implicitDependencies": ["ra-ui", "st-ui"]
     },
     "ng-ui-e2e": {
       "tags": ["e2e"],
-      "implicitDependencies": [
-        "ng-ui", "st-ui"
-      ]
+      "implicitDependencies": ["ng-ui", "st-ui"]
     }
   }
 }

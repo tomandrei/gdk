@@ -1,0 +1,9 @@
+{
+  "name": "@gdk/ra-ui",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "@gds/st-ui": "*"
+  }
+}

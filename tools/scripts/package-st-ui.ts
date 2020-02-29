@@ -6,6 +6,9 @@ const rootDir = process.env.INIT_CWD || process.env.PWD;
 const nxDistDir = join(rootDir, 'dist', 'libs', 'st-ui');
 const stencilDistDir = join(rootDir, 'libs', 'st-ui', 'dist');
 
+/**
+ * Clean up and copy lib to dist
+ */
 const copyDist = async () => {
     try {
         await remove(nxDistDir);
@@ -16,6 +19,9 @@ const copyDist = async () => {
     }
 }
 
+/**
+ * Create package.json for publish
+ */
 const createPackage = async () => {
     const pkg = join(nxDistDir, 'package.json');
     const pkgJSON = {

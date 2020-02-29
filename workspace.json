@@ -16,10 +16,7 @@
               "libs/st-ui/tsconfig.lib.json",
               "libs/st-ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/st-ui/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/st-ui/**"]
           }
         },
         "test": {
@@ -70,6 +67,18 @@
       "sourceRoot": "libs/ng-ui/src",
       "prefix": "gdk",
       "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-ui/tsconfig.lib.json",
+            "project": "libs/ng-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-ui/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -77,10 +86,7 @@
               "libs/ng-ui/tsconfig.lib.json",
               "libs/ng-ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ng-ui/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ng-ui/**"]
           }
         },
         "test": {
@@ -134,6 +140,17 @@
       "projectType": "library",
       "schematics": {},
       "architect": {
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/ra-ui",
+            "tsConfig": "libs/ra-ui/tsconfig.lib.json",
+            "project": "libs/ra-ui/package.json",
+            "entryFile": "libs/ra-ui/src/index.ts",
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
+          }
+        },
         "lint": {
           "builder": "@nrwl/linter:lint",
           "options": {
@@ -143,10 +160,7 @@
               "libs/ra-ui/tsconfig.lib.json",
               "libs/ra-ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ra-ui/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ra-ui/**"]
           }
         },
         "test": {
@@ -209,13 +223,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/ra-ui-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ra-ui-e2e/**"
-            ]
+            "tsConfig": ["apps/ra-ui-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ra-ui-e2e/**"]
           }
         }
       }
@@ -241,13 +250,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/ng-ui-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ng-ui-e2e/**"
-            ]
+            "tsConfig": ["apps/ng-ui-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ng-ui-e2e/**"]
           }
         }
       }
