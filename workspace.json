@@ -23,7 +23,8 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/st-ui/jest.config.js",
-            "tsConfig": "libs/st-ui/tsconfig.spec.json"
+            "tsConfig": "libs/st-ui/tsconfig.spec.json",
+            "passWithNoTests": true
           }
         },
         "build": {
@@ -94,7 +95,8 @@
           "options": {
             "jestConfig": "libs/ng-ui/jest.config.js",
             "tsConfig": "libs/ng-ui/tsconfig.spec.json",
-            "setupFile": "libs/ng-ui/src/test-setup.ts"
+            "setupFile": "libs/ng-ui/src/test-setup.ts",
+            "passWithNoTests": true
           }
         },
         "storybook": {
@@ -167,7 +169,8 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/ra-ui/jest.config.js",
-            "tsConfig": "libs/ra-ui/tsconfig.spec.json"
+            "tsConfig": "libs/ra-ui/tsconfig.spec.json",
+            "passWithNoTests": true
           }
         },
         "storybook": {

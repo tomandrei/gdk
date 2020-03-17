@@ -11,13 +11,16 @@ const stencilDir = join(rootDir, 'libs', 'st-ui');
   const child = spawn('stencil', ['build', '--docs']);
 
   //Print stdout to screen
-  child.stdout.on('data', function (data) {   process.stdout.write(data.toString());  });
-  
-  //Print stderr to screen
-  child.stderr.on('data', function (data) {   process.stdout.write(data.toString());  });
-  
-  child.on('close', function (code) { 
-      console.log("Finished with code " + code);
+  child.stdout.on('data', data => {
+    process.stdout.write(data.toString());
   });
 
+  //Print stderr to screen
+  child.stderr.on('data', data => {
+    process.stdout.write(data.toString());
+  });
+
+  child.on('close', code => {
+    console.log('build st-ui finished with code: ' + code);
+  });
 })();

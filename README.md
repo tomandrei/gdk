@@ -1,6 +1,22 @@
-# Gdk
+# GDK
 
 Geekster Development Kit is a development toolkit using nx monorepo, stenciljs, storybook, angular, react etc.
+
+- [Install](#install)
+- [Generate an application](#generate-an-application)
+- [Generate a library](#generate-a-library)
+- [Development server](#development-server)
+- [Code scaffolding](#code-scaffolding)
+- [Build](#Build)
+- [Running linter](#running-linter)
+- [Running unit tests](#running-unit-tests)
+- [Running end-to-end tests](#running-end-to-end-tests)
+- [Understand your workspace](#understand-your-workspace)
+- [Further help](#further-help)
+
+## Install
+
+Run `npm install` to install dependencies and generate the stencil distribution.
 
 ## Generate an application
 
@@ -11,6 +27,7 @@ Run `nx g @nrwl/angular:app my-app` to generate an angular application.
 
 Run `nx g @nrwl/react:lib my-lib` to generate a react library.
 Run `nx g @nrwl/angular:lib my-lib` to generate an angular library.
+TODO: Run `nx g @gdk/stencil:lib my-lib` to generate a stencil library.
 
 They can be imported from `@gdk/mylib`.
 
@@ -21,7 +38,9 @@ Run `nx serve st-ui` for a stencil dev server. Navigate to http://localhost:3300
 
 ## Code scaffolding
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new react component.
+Run `nx g @nrwl/angular:component my-component --project=my-app` to generate a new angular component.
+TODO: Run `nx g @gdk/stencil:component my-component` to generate a new stencil component.
 
 ## Build
 

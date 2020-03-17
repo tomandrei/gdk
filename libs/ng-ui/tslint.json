@@ -1,7 +1,22 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "gdk", "camelCase"],
-    "component-selector": [true, "element", "gdk", "kebab-case"]
+    "directive-selector": [
+      true,
+      "attribute",
+      "gdk",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "gdk",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "!**/*"
+    ]
   }
 }
