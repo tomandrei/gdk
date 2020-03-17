@@ -1,8 +1,15 @@
-import { configure, addDecorator } from '@storybook/angular';
+import { configure, addDecorator, addParameters } from '@storybook/angular';
+import theme from '../../../.storybook/theme';
 import { withKnobs } from '@storybook/addon-knobs';
 import { applyPolyfills, defineCustomElements } from '@gdk/st-ui/loader';
 
 addDecorator(withKnobs);
+
+addParameters({
+    options: {
+        theme: theme
+    }
+})
 
 // Load stories
 const loaderFn = () => {

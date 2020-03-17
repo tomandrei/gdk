@@ -1,7 +1,14 @@
-import { configure, addDecorator, storyOf } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import theme from '../../../.storybook/theme';
 import { withKnobs } from '@storybook/addon-knobs';
 
 addDecorator(withKnobs);
+
+addParameters({
+    options: {
+        theme: theme
+    }
+})
 
 // Load stories
 require.context('../../st-ui/src/', true, /\.ra.story\.tsx$/);
