@@ -44,8 +44,8 @@ export function ProxyCmp(opts: { inputs?: any; methods?: any }) {
 import { Components } from '@gdk/st-ui'
 
 export declare interface MyComponent extends Components.MyComponent {}
-@ProxyCmp({inputs: ['first', 'last', 'size']})
-@Component({ selector: 'my-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'size'] })
+@ProxyCmp({inputs: ['first', 'last', 'size', 'styles']})
+@Component({ selector: 'my-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'size', 'styles'] })
 export class MyComponent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

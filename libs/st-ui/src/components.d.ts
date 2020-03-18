@@ -20,6 +20,12 @@ export namespace Components {
           * The component size
          */
         "size": MyComponentSize;
+        /**
+          * The component styles {object}
+         */
+        "styles": {
+            [key: string]: string;
+        };
     }
 }
 declare global {
@@ -47,6 +53,12 @@ declare namespace LocalJSX {
           * The component size
          */
         "size"?: MyComponentSize;
+        /**
+          * The component styles {object}
+         */
+        "styles"?: {
+            [key: string]: string;
+        };
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

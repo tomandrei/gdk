@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-03-18T21:37:53",
+  "timestamp": "2020-03-18T22:42:38",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.10.1",
@@ -72,12 +72,33 @@
           ],
           "optional": false,
           "required": false
+        },
+        {
+          "name": "styles",
+          "type": "{ [key: string]: string; }",
+          "mutable": false,
+          "reflectToAttr": false,
+          "docs": "The component styles {object}",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "{ [key: string]: string; }"
+            }
+          ],
+          "optional": false,
+          "required": false
         }
       ],
       "methods": [],
       "events": [],
       "listeners": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--my-component-color",
+          "annotation": "prop",
+          "docs": "My component color Ex: #41385c;"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],

@@ -9,8 +9,8 @@ enum Types {
     BOOLEAN = 'boolean'
 }
 
-export const getPropKnobs = (name: string, setInitVal = {}) => {
-    const key = 'Props';
+export const getAttributeKnobs = (name: string, setInitVal = {}) => {
+    const key = 'Attributes';
     const props = {};
     const component: JsonDocsComponent = specs.components.filter(cmp => cmp.tag === name)[0];
 

@@ -3,7 +3,8 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "target": "es2017"
   },
   "exclude": ["**/*.story.ts", "**/*.story.tsx"],
   "include": ["src", "types/jsx.d.ts"]

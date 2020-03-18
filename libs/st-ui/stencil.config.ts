@@ -1,10 +1,13 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 import { angularOutputTarget } from '@stencil/angular-output-target';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'st-ui',
-  excludeSrc: ['**/*.ng.story.ts', '**/*.ra.story.tsx'],
+  plugins: [
+    sass()
+  ],
   outputTargets: [
     angularOutputTarget({
       componentCorePackage: '@gdk/st-ui',

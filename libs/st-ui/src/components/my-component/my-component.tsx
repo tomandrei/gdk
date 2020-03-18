@@ -4,7 +4,7 @@ import { MyComponentSize } from './my-component-size.interface';
 
 @Component({
   tag: 'my-component',
-  styleUrl: 'my-component.css',
+  styleUrl: 'my-component.scss',
   shadow: true
 })
 export class MyComponent {
@@ -23,11 +23,24 @@ export class MyComponent {
    */
   @Prop() size: MyComponentSize = MyComponentSize.MEDIUM;
 
+  /**
+   * The component styles {object}
+   */
+  @Prop() styles: { [key: string]: string; };
+
   private getText(): string {
     return format(this.first, this.last, this.size);
   }
 
   render() {
-  return <div>Hello, World! I'm {this.getText()}</div>;
+    const rootClasses = {
+      ['my-component']: true
+    }
+    const props = {
+      style: this.styles,
+      class: rootClasses
+    }
+
+    return <div {...props}>Hello, World! I'm {this.getText()}</div>;
   }
 }
