@@ -1,5 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
+import { MyComponentSize } from './my-component-size.interface';
 
 @Component({
   tag: 'my-component',
@@ -13,20 +14,20 @@ export class MyComponent {
   @Prop() first: string;
 
   /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
    * The last name
    */
   @Prop() last: string;
 
+  /**
+   * The component size
+   */
+  @Prop() size: MyComponentSize = MyComponentSize.MEDIUM;
+
   private getText(): string {
-    return format(this.first, this.middle, this.last);
+    return format(this.first, this.last, this.size);
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+  return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }

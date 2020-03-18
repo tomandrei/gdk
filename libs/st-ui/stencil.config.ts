@@ -3,7 +3,7 @@ import { angularOutputTarget } from '@stencil/angular-output-target';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
-  namespace: 'gdk',
+  namespace: 'st-ui',
   excludeSrc: ['**/*.ng.story.ts', '**/*.ra.story.tsx'],
   outputTargets: [
     angularOutputTarget({
