@@ -3,16 +3,16 @@ import { getAttributeKnobs } from '../../../../docs/attribute-knobs';
 import { getStyleKnobs } from '../../../../docs/style-knobs';
 
 /* tslint:disable */
-import { MyComponent } from '@gdk/ng-ui';
+import { GdkComponent } from '@gdk/ng-ui';
 
 
-storiesOf('Elements|MyComponent', module)
+storiesOf('Elements|GdkComponent', module)
   .add('Dynamic', () => {
-    const attr: any = getAttributeKnobs('my-component');
-    attr.styles = getStyleKnobs('my-component');
+    const attr: any = getAttributeKnobs('gdk-component');
+    attr.styles = getStyleKnobs('gdk-component');
 
     return {
-      component: MyComponent,
+      component: GdkComponent,
       props: attr
     }
   });

@@ -1,10 +1,10 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { APP_INITIALIZER, ModuleWithProviders, NgModule, NgZone } from '@angular/core';
 
-import { MyComponent } from './ng-ui';
+import { GdkComponent } from './ng-ui';
 import { initialize } from './initialize';
 
-export const DIRECTIVES = [MyComponent];
+export const DIRECTIVES = [GdkComponent];
 
 @NgModule({
   imports: [CommonModule],

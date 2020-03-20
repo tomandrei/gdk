@@ -8,4 +8,4 @@ import { JSX } from '@gdk/st-ui';
 import { defineCustomElements, applyPolyfills } from '@gdk/st-ui/loader';
 
 applyPolyfills().then(() => defineCustomElements());
-export const MyComponent = /*@__PURE__*/createReactComponent<JSX.MyComponent, HTMLMyComponentElement>('my-component');
+export const GdkComponent = /*@__PURE__*/createReactComponent<JSX.GdkComponent, HTMLGdkComponentElement>('gdk-component');

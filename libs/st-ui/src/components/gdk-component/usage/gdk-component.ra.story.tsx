@@ -5,13 +5,13 @@ import { getAttributeKnobs } from '../../../../docs/attribute-knobs';
 import { getStyleKnobs } from '../../../../docs/style-knobs';
 
 /* tslint:disable */
-import { MyComponent } from '@gdk/ra-ui';
+import { GdkComponent } from '@gdk/ra-ui';
 
 
-storiesOf('Elements|MyComponent', module)
+storiesOf('Elements|GdkComponent', module)
   .add('Dynamic', () => {
-    const attr: any = getAttributeKnobs('my-component');
-    attr.styles = getStyleKnobs('my-component');
+    const attr: any = getAttributeKnobs('gdk-component');
+    attr.styles = getStyleKnobs('gdk-component');
 
-    return <MyComponent {...attr}></MyComponent>
+    return <GdkComponent {...attr}></GdkComponent>
   });

@@ -5,9 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MyComponentSize, } from "./components/my-component/my-component-size.interface";
+import { GdkComponentSize, } from "./components/gdk-component/gdk-component-size.interface";
 export namespace Components {
-    interface MyComponent {
+    interface GdkComponent {
         /**
           * The first name
          */
@@ -19,7 +19,7 @@ export namespace Components {
         /**
           * The component size
          */
-        "size": MyComponentSize;
+        "size": GdkComponentSize;
         /**
           * The component styles {object}
          */
@@ -29,18 +29,18 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLGdkComponentElement extends Components.GdkComponent, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLGdkComponentElement: {
+        prototype: HTMLGdkComponentElement;
+        new (): HTMLGdkComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "gdk-component": HTMLGdkComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface GdkComponent {
         /**
           * The first name
          */
@@ -52,7 +52,7 @@ declare namespace LocalJSX {
         /**
           * The component size
          */
-        "size"?: MyComponentSize;
+        "size"?: GdkComponentSize;
         /**
           * The component styles {object}
          */
@@ -61,14 +61,14 @@ declare namespace LocalJSX {
         };
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "gdk-component": GdkComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "gdk-component": LocalJSX.GdkComponent & JSXBase.HTMLAttributes<HTMLGdkComponentElement>;
         }
     }
 }

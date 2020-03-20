@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-03-18T22:42:38",
+  "timestamp": "2020-03-20T20:04:20",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.10.1",
@@ -7,9 +7,9 @@
   },
   "components": [
     {
-      "filePath": "./src/components/my-component/my-component.tsx",
+      "filePath": "./src/components/gdk-component/gdk-component.tsx",
       "encapsulation": "shadow",
-      "tag": "my-component",
+      "tag": "gdk-component",
       "readme": "# my-component\n\n\n",
       "docs": "",
       "docsTags": [],
@@ -49,25 +49,25 @@
         },
         {
           "name": "size",
-          "type": "MyComponentSize.LARGE | MyComponentSize.MEDIUM | MyComponentSize.SMALL | MyComponentSize.XLARGE",
+          "type": "GdkComponentSize.LARGE | GdkComponentSize.MEDIUM | GdkComponentSize.SMALL | GdkComponentSize.XLARGE",
           "mutable": false,
           "attr": "size",
           "reflectToAttr": false,
           "docs": "The component size",
           "docsTags": [],
-          "default": "MyComponentSize.MEDIUM",
+          "default": "GdkComponentSize.MEDIUM",
           "values": [
             {
-              "type": "MyComponentSize.LARGE"
+              "type": "GdkComponentSize.LARGE"
             },
             {
-              "type": "MyComponentSize.MEDIUM"
+              "type": "GdkComponentSize.MEDIUM"
             },
             {
-              "type": "MyComponentSize.SMALL"
+              "type": "GdkComponentSize.SMALL"
             },
             {
-              "type": "MyComponentSize.XLARGE"
+              "type": "GdkComponentSize.XLARGE"
             }
           ],
           "optional": false,
@@ -94,9 +94,9 @@
       "listeners": [],
       "styles": [
         {
-          "name": "--my-component-color",
+          "name": "--gdk-component-color",
           "annotation": "prop",
-          "docs": "My component color Ex: #41385c;"
+          "docs": "gdk component color Ex: #41385c;"
         }
       ],
       "slots": [],

@@ -1,4 +1,4 @@
-export enum MyComponentSize {
+export enum GdkComponentSize {
     SMALL = 'small',
     MEDIUM = 'medium',
     LARGE = 'large',

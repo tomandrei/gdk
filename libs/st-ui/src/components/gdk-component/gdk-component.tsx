@@ -1,13 +1,13 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
-import { MyComponentSize } from './my-component-size.interface';
+import { GdkComponentSize } from './gdk-component-size.interface';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.scss',
+  tag: 'gdk-component',
+  styleUrl: 'gdk-component.scss',
   shadow: true
 })
-export class MyComponent {
+export class GdkComponent {
   /**
    * The first name
    */
@@ -21,7 +21,7 @@ export class MyComponent {
   /**
    * The component size
    */
-  @Prop() size: MyComponentSize = MyComponentSize.MEDIUM;
+  @Prop() size: GdkComponentSize = GdkComponentSize.MEDIUM;
 
   /**
    * The component styles {object}
@@ -34,7 +34,7 @@ export class MyComponent {
 
   render() {
     const rootClasses = {
-      ['my-component']: true
+      ['gdk-component']: true
     }
     const props = {
       style: this.styles,

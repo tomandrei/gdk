@@ -1,0 +1,12 @@
+@import './gdk-component.vars.scss';
+
+:host {
+    /**
+     * @prop --gdk-component-color: gdk component color Ex: #41385c;
+     */
+     --gdk-component-color: #{$gdk-component-color};
+}
+
+:host .gdk-component {
+    color: var(--gdk-component-color);
+}
