@@ -1,0 +1,2 @@
+/// @prop - gdk-<%= dasherize(name) %> color hex
+$gdk-<%= dasherize(name) %>-color: #41385c;

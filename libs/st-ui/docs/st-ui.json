@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-03-20T20:04:20",
+  "timestamp": "2020-03-20T21:51:21",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.10.1",
@@ -48,32 +48,6 @@
           "required": false
         },
         {
-          "name": "size",
-          "type": "GdkComponentSize.LARGE | GdkComponentSize.MEDIUM | GdkComponentSize.SMALL | GdkComponentSize.XLARGE",
-          "mutable": false,
-          "attr": "size",
-          "reflectToAttr": false,
-          "docs": "The component size",
-          "docsTags": [],
-          "default": "GdkComponentSize.MEDIUM",
-          "values": [
-            {
-              "type": "GdkComponentSize.LARGE"
-            },
-            {
-              "type": "GdkComponentSize.MEDIUM"
-            },
-            {
-              "type": "GdkComponentSize.SMALL"
-            },
-            {
-              "type": "GdkComponentSize.XLARGE"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
           "name": "styles",
           "type": "{ [key: string]: string; }",
           "mutable": false,
@@ -83,6 +57,29 @@
           "values": [
             {
               "type": "{ [key: string]: string; }"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "GdkComponentTitle.MISS | GdkComponentTitle.MR | GdkComponentTitle.MRS",
+          "mutable": false,
+          "attr": "title",
+          "reflectToAttr": false,
+          "docs": "The title",
+          "docsTags": [],
+          "default": "GdkComponentTitle.MR",
+          "values": [
+            {
+              "type": "GdkComponentTitle.MISS"
+            },
+            {
+              "type": "GdkComponentTitle.MR"
+            },
+            {
+              "type": "GdkComponentTitle.MRS"
             }
           ],
           "optional": false,

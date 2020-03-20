@@ -5,6 +5,7 @@ Geekster Development Kit is a development toolkit using nx monorepo, stenciljs, 
 - [Install](#install)
 - [Generate an application](#generate-an-application)
 - [Generate a library](#generate-a-library)
+- [Generate a component](#generate-a-component)
 - [Development server](#development-server)
 - [Code scaffolding](#code-scaffolding)
 - [Build](#Build)
@@ -33,6 +34,14 @@ Run `nx g @nrwl/angular:lib my-lib` to generate an angular library.
 TODO: Run `nx g @gdk/stencil:lib my-lib` to generate a stencil library.
 
 They can be imported from `@gdk/mylib`.
+
+## Generate a component
+
+Run `nx g @nrwl/react:component my-component --project=ra-ui` to generate a react component.
+
+Run `nx g @nrwl/angular:component my-component --project=ng-ui` to generate an angular component.
+
+Run `nx workspace-schematic st-component my-component` to generate a stencil library.
 
 ## Development server
 

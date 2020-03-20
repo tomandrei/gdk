@@ -1,22 +1,21 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
-import { GdkComponentTitle } from './gdk-component-title.interface';
 
 @Component({
-  tag: 'gdk-component',
-  styleUrl: 'gdk-component.scss',
+  tag: 'gdk-<%= dasherize(name) %>',
+  styleUrl: 'gdk-<%= dasherize(name) %>.scss',
   shadow: true
 })
-export class GdkComponent {
-  /**
-   * The title
-   */
-  @Prop() title: GdkComponentTitle = GdkComponentTitle.MR;
-
+export class Gdk<%= classify(name) %> {
   /**
    * The first name
    */
   @Prop() first: string;
+
+  /**
+   * The middle name
+   */
+  @Prop() middle: string;
 
   /**
    * The last name
@@ -29,12 +28,12 @@ export class GdkComponent {
   @Prop() styles: { [key: string]: string; };
 
   private getText(): string {
-    return format(this.title, this.first, this.last);
+    return format(this.first, this.middle, this.last);
   }
 
   render() {
     const rootClasses = {
-      ['gdk-component']: true
+      ['gdk-<%= dasherize(name) %>']: true
     }
     const props = {
       style: this.styles,

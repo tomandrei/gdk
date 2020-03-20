@@ -1,0 +1,17 @@
+import * as React from 'react';
+import { h } from '@stencil/core';
+import { storiesOf } from '@storybook/react';
+import { getAttributeKnobs } from '../../../../docs/attribute-knobs';
+import { getStyleKnobs } from '../../../../docs/style-knobs';
+
+/* tslint:disable */
+import { Gdk<%= classify(name) %> } from '@gdk/ra-ui';
+
+
+storiesOf('Elements|Gdk<%= classify(name) %>', module)
+  .add('Dynamic', () => {
+    const attr: any = getAttributeKnobs('gdk-<%= dasherize(name) %>');
+    attr.styles = getStyleKnobs('gdk-<%= dasherize(name) %>');
+
+    return <Gdk<%= classify(name) %> {...attr}></Gdk<%= classify(name) %>>
+  });

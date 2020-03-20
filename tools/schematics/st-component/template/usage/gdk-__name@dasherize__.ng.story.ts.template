@@ -1,0 +1,18 @@
+import { storiesOf } from '@storybook/angular';
+import { getAttributeKnobs } from '../../../../docs/attribute-knobs';
+import { getStyleKnobs } from '../../../../docs/style-knobs';
+
+/* tslint:disable */
+import { Gdk<%= classify(name) %> } from '@gdk/ng-ui';
+
+
+storiesOf('Elements|Gdk<%= classify(name) %>', module)
+  .add('Dynamic', () => {
+    const attr: any = getAttributeKnobs('gdk-<%= dasherize(name) %>');
+    attr.styles = getStyleKnobs('gdk-<%= dasherize(name) %>');
+
+    return {
+      component: Gdk<%= classify(name) %>,
+      props: attr
+    }
+  });

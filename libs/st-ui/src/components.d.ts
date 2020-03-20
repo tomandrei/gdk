@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { GdkComponentSize, } from "./components/gdk-component/gdk-component-size.interface";
+import { GdkComponentTitle, } from "./components/gdk-component/gdk-component-title.interface";
 export namespace Components {
     interface GdkComponent {
         /**
@@ -17,15 +17,15 @@ export namespace Components {
          */
         "last": string;
         /**
-          * The component size
-         */
-        "size": GdkComponentSize;
-        /**
           * The component styles {object}
          */
         "styles": {
             [key: string]: string;
         };
+        /**
+          * The title
+         */
+        "title": GdkComponentTitle;
     }
 }
 declare global {
@@ -50,15 +50,15 @@ declare namespace LocalJSX {
          */
         "last"?: string;
         /**
-          * The component size
-         */
-        "size"?: GdkComponentSize;
-        /**
           * The component styles {object}
          */
         "styles"?: {
             [key: string]: string;
         };
+        /**
+          * The title
+         */
+        "title"?: GdkComponentTitle;
     }
     interface IntrinsicElements {
         "gdk-component": GdkComponent;
