@@ -28,14 +28,18 @@
           }
         },
         "build": {
-          "builder": "@nrwl/workspace:run-commands",
+          "builder": "./tools/builders:stencil-build",
           "options": {
-            "parallel": false,
-            "commands": [
-              {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/build-st-ui"
-              }
-            ]
+            "outputPath": "dist/libs/st-ui",
+            "project": "libs/st-ui/package.json",
+            "config": "libs/st-ui/stencil.config.ts",
+            "docs": true,
+            "stats": true
+          },
+          "configurations": {
+            "production": {
+              "prod": true
+            }
           }
         },
         "serve": {

@@ -1,5 +1,5 @@
 import { text } from '@storybook/addon-knobs';
-import specs from './st-ui';
+import specs from '../../docs/st-ui';
 
 export const getStyleKnobs = (name: string) => {
     const key = 'Styles';

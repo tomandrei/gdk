@@ -6,6 +6,6 @@
     "jsxFactory": "h",
     "target": "es2017"
   },
-  "exclude": ["**/*.story.ts", "**/*.story.tsx"],
+  "exclude": ["**/*.story.ts", "**/*.story.tsx", "./src/utils/attribute-knobs.ts", "./src/utils/style-knobs.ts"],
   "include": ["src", "types/jsx.d.ts"]
 }

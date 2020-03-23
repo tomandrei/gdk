@@ -1,0 +1,5 @@
+<div id="container">
+
+  <gdk-<%= dasherize(name) %> title="Mr" first="Joe" last="Doe"></gdk-<%= dasherize(name) %>>
+  
+</div>

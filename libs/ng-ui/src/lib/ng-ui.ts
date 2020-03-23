@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
 import { fromEvent } from 'rxjs';
 
 export const proxyInputs = (Cmp: any, inputs: string[]) => {
@@ -44,8 +44,8 @@ export function ProxyCmp(opts: { inputs?: any; methods?: any }) {
 import { Components } from '@gdk/st-ui'
 
 export declare interface GdkComponent extends Components.GdkComponent {}
-@ProxyCmp({inputs: ['first', 'last', 'size', 'styles']})
-@Component({ selector: 'gdk-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'size', 'styles'] })
+@ProxyCmp({inputs: ['first', 'last', 'styles', 'title']})
+@Component({ selector: 'gdk-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'styles', 'title'] })
 export class GdkComponent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

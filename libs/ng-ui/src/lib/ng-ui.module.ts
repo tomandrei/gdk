@@ -4,7 +4,7 @@ import { APP_INITIALIZER, ModuleWithProviders, NgModule, NgZone } from '@angular
 import { GdkComponent } from './ng-ui';
 import { initialize } from './initialize';
 
-export const DIRECTIVES = [GdkComponent];
+const DIRECTIVES = [ GdkComponent ];
 
 @NgModule({
   imports: [CommonModule],

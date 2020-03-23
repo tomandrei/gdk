@@ -9,6 +9,7 @@
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
+    "builder": "tsc -p tools/tsconfig.tools.json ",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
@@ -24,7 +25,7 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "nx build st-ui && nx package st-ui"
+    "postinstall": "npm run builder && nx build st-ui"
   },
   "private": true,
   "devDependencies": {

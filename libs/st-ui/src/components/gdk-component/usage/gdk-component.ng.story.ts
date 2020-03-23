@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/angular';
-import { getAttributeKnobs } from '../../../../docs/attribute-knobs';
-import { getStyleKnobs } from '../../../../docs/style-knobs';
+import { getAttributeKnobs } from '../../../utils/attribute-knobs';
+import { getStyleKnobs } from '../../../utils/style-knobs';
 
 /* tslint:disable */
 import { GdkComponent } from '@gdk/ng-ui';

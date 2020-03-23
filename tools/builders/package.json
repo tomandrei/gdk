@@ -1,0 +1,5 @@
+{
+    "name": "stencil-builder",
+    "private": true,
+    "builders": "./builders.json"
+}

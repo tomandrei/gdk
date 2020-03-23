@@ -8,7 +8,11 @@
 # stenciljs
 /libs/st-ui/www/
 /libs/st-ui/dist/
+/libs/st-ui/docs/
 /libs/st-ui/.stencil/
+
+# builders
+/tools/**.*.js
 
 # dependencies
 /node_modules
