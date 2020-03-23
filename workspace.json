@@ -31,7 +31,6 @@
           "builder": "./tools/builders:stencil-build",
           "options": {
             "outputPath": "dist/libs/st-ui",
-            "project": "libs/st-ui/package.json",
             "config": "libs/st-ui/stencil.config.ts",
             "docs": true,
             "stats": true

@@ -8,9 +8,6 @@
       "config": {
         "type": "string"
       },
-      "project": {
-        "type": "string"
-      },
       "docs": {
         "type": "boolean"
       },

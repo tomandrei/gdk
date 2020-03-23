@@ -3,12 +3,15 @@ import { Observable } from 'rxjs';
 import { join, resolve } from 'path';
 import { run } from '../../utils/run';
 import { copyStencil } from '../../utils/copy';
+import { readWorkspaceJson } from '@nrwl/workspace';
 
 const build = (options, context) => {
     return Observable.create(async observer => {
         try {
-            const { config, docs, stats, prod } = options;
+            const { outputPath, config, docs, stats, prod } = options;
             const workspaceRoot = context.workspaceRoot;
+            const projectName = context.target.project;
+            const root = readWorkspaceJson().projects[projectName].root;
             const buildArgs = ['build', `--config ${join(workspaceRoot, config)}`];
 
             if(docs) {
@@ -24,7 +27,10 @@ const build = (options, context) => {
             await run(resolve(workspaceRoot, 'node_modules/.bin/stencil'), buildArgs)
             
             if(docs) {
-                await copyStencil(workspaceRoot);
+                const from = join(workspaceRoot, root);
+                const to = join(workspaceRoot, outputPath);
+
+                await copyStencil(from, to);
             }
 
             observer.next({ success: true });

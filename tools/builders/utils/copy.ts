@@ -2,19 +2,19 @@
 import { join } from 'path';
 import { remove, move, copy } from 'fs-extra';
 
-export const copyStencil = (rootDir: string) => {
+export const copyStencil = (from:string, to: string) => {
     // dist
-    const nxDistDir = join(rootDir, 'dist', 'libs', 'st-ui', 'dist');
-    const stencilDistDir = join(rootDir, 'libs', 'st-ui', 'dist');
+    const nxDistDir = join(to, 'dist');
+    const stencilDistDir = join(from, 'dist');
     // loader
-    const nxLoaderDir = join(rootDir, 'dist', 'libs', 'st-ui', 'loader');
-    const stencilLoaderDir = join(rootDir, 'libs', 'st-ui', 'loader');
+    const nxLoaderDir = join(to, 'loader');
+    const stencilLoaderDir = join(from, 'loader');
     // package.json
-    const nxPackage = join(rootDir, 'dist', 'libs', 'st-ui', 'package.json');
-    const stencilPackage = join(rootDir, 'libs', 'st-ui', 'package.json');
+    const nxPackage = join(to, 'package.json');
+    const stencilPackage = join(from, 'package.json');
     // README.md
-    const nxReadme = join(rootDir, 'dist', 'libs', 'st-ui', 'README.md');
-    const stencilReadme = join(rootDir, 'libs', 'st-ui', 'README.md');
+    const nxReadme = join(to, 'README.md');
+    const stencilReadme = join(from, 'README.md');
 
     return remove(nxDistDir).then(async () => Promise.all([
         move(stencilDistDir, nxDistDir),
