@@ -1,5 +1,6 @@
 import { text, number, boolean, select, array } from '@storybook/addon-knobs';
-import { specs, JsonDocsComponent } from '../../docs/st-ui';
+import { JsonDocsComponent } from '../../docs/st-ui';
+import specs from '../../docs/st-ui';
 import * as ComponentTypes from '../interface';
 
 enum Types {

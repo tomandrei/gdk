@@ -19,7 +19,8 @@ export const config: Config = {
       proxiesFile: '../ra-ui/src/lib/ra-ui.ts'
     }),
     {
-      type: 'dist'
+      type: 'dist',
+      esmLoaderPath: '../loader'
     },
     {
       type: 'docs-json',
