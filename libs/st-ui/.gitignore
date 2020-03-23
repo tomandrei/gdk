@@ -1,0 +1,6 @@
+# stenciljs
+/www
+/dist
+/docs
+/loader
+/.stencil

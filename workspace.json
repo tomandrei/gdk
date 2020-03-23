@@ -43,14 +43,9 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/workspace:run-commands",
+          "builder": "./tools/builders:stencil-serve",
           "options": {
-            "parallel": false,
-            "commands": [
-              {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/serve-st-ui"
-              }
-            ]
+            "config": "libs/st-ui/stencil.config.ts"
           }
         },
         "package": {
