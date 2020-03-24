@@ -16,7 +16,7 @@ export const copyStencil = (from:string, to: string) => {
     const nxReadme = join(to, 'README.md');
     const stencilReadme = join(from, 'README.md');
 
-    return remove(nxDistDir).then(async () => Promise.all([
+    return remove(to).then(async () => Promise.all([
         move(stencilDistDir, nxDistDir),
         move(stencilLoaderDir, nxLoaderDir),
         copy(stencilPackage, nxPackage),
