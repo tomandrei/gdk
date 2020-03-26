@@ -1,13 +1,12 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": ".",
+    "outDir": "../dist/out-tsc/tools",
     "rootDir": ".",
     "module": "commonjs",
     "target": "es5",
     "types": ["node"],
     "sourceMap": false
   },
-  "include": ["**/*.ts"],
-  "exclude": ["schematics/**", "scripts/**"]
+  "include": ["**/*.ts"]
 }

@@ -28,7 +28,7 @@
           }
         },
         "build": {
-          "builder": "./tools/builders:stencil-build",
+          "builder": "./dist/out-tsc/tools/builders:stencil-build",
           "options": {
             "outputPath": "dist/libs/st-ui",
             "config": "libs/st-ui/stencil.config.ts",
@@ -42,7 +42,7 @@
           }
         },
         "serve": {
-          "builder": "./tools/builders:stencil-serve",
+          "builder": "./dist/out-tsc/tools/builders:stencil-serve",
           "options": {
             "config": "libs/st-ui/stencil.config.ts"
           }

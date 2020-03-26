@@ -9,7 +9,7 @@
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
-    "builder": "tsc -p tools/tsconfig.tools.json ",
+    "builder": "nx workspace-schematic --list-schematics",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
