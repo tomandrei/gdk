@@ -30,7 +30,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a react library.
 
 Run `nx g @nrwl/angular:lib my-lib` to generate an angular library.
 
-TODO: Run `nx g @gdk/stencil:lib my-lib` to generate a stencil library.
+Run `nx workspace-schematic st-library` to generate a stencil library.
 
 They can be imported from `@gdk/mylib`.
 
