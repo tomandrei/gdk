@@ -46,17 +46,6 @@
           "options": {
             "config": "libs/st-ui/stencil.config.ts"
           }
-        },
-        "package": {
-          "builder": "@nrwl/workspace:run-commands",
-          "options": {
-            "parallel": false,
-            "commands": [
-              {
-                "command": "npx ts-node --project tools/tsconfig.tools.json tools/scripts/package-st-ui"
-              }
-            ]
-          }
         }
       }
     },

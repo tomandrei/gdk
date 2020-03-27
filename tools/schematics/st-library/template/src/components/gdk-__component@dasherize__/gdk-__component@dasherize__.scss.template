@@ -1,0 +1,12 @@
+@import './gdk-<%= dasherize(component) %>.vars.scss';
+
+:host {
+    /**
+     * @prop --gdk-<%= dasherize(component) %>-color: gdk <%= component %> color Ex: #41385c;
+     */
+     --gdk-<%= dasherize(component) %>-color: #{$gdk-<%= dasherize(component) %>-color};
+
+     .gdk-<%= dasherize(component) %> {
+        color: var(--gdk-<%= dasherize(component) %>-color);
+    }
+}

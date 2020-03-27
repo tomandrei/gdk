@@ -1,20 +1,20 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('gdk-component', () => {
+describe('gdk-<%= dasherize(component) %>', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gdk-component></gdk-component>');
-    const element = await page.find('gdk-component');
+    await page.setContent('<gdk-<%= dasherize(component) %>></gdk-<%= dasherize(component) %>>');
+    const element = await page.find('gdk-<%= dasherize(component) %>');
     expect(element).toHaveClass('hydrated');
   });
 
   it('renders changes to the name data', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gdk-component></gdk-component>');
-    const component = await page.find('gdk-component');
-    const element = await page.find('gdk-component >>> div');
+    await page.setContent('<gdk-<%= dasherize(component) %>></gdk-<%= dasherize(component) %>>');
+    const component = await page.find('gdk-<%= dasherize(component) %>');
+    const element = await page.find('gdk-<%= dasherize(component) %> >>> div');
     expect(element.textContent).toEqual(`Hello, World! I'm `);
 
     component.setProperty('first', 'James');
@@ -25,8 +25,8 @@ describe('gdk-component', () => {
     await page.waitForChanges();
     expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
 
-    component.setProperty('title', 'Mr');
+    component.setProperty('middle', 'Earl');
     await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm Mr James Quincy`);
+    expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
   });
 });

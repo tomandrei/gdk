@@ -8,7 +8,7 @@ const serve = (options, context) => {
         try {
             const { config } = options;
             const workspaceRoot = context.workspaceRoot;
-            const buildArgs = ['build', `--config ${join(workspaceRoot, config)}`, '--watch'];
+            const buildArgs = ['build', `--config ${join(workspaceRoot, config)}`, '--serve', '--watch'];
             
             await run(resolve(workspaceRoot, 'node_modules/.bin/stencil'), buildArgs)
             
@@ -16,7 +16,7 @@ const serve = (options, context) => {
             observer.complete();
 
         } catch (e) {
-            observer.error(`ERROR - Builder: Stencil build - ${e}`);
+            observer.error(`ERROR - Builder: Stencil serve - ${e}`);
         }
     })
 }

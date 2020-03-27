@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "st-library",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "x-prompt": "How would you like to name your library?"
+    },
+    "component": {
+      "type": "string",
+      "description": "Default component name",
+      "x-prompt": "How would you like to name your default component?"
+    }
+  },
+  "required": []
+}

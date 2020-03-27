@@ -46,7 +46,7 @@ Run `nx g @nrwl/react:component my-component --project=ra-ui` to generate a reac
 
 Run `nx g @nrwl/angular:component my-component --project=ng-ui` to generate an angular component.
 
-Run `nx workspace-schematic st-component my-component` to generate a stencil library.
+Run `nx workspace-schematic st-component my-component` to generate a stencil component.
 
 ## Build
 
