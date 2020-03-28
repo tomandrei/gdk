@@ -6,6 +6,8 @@
     "types": ["jest", "node"]
   },
   "include": [
+    "**/*.e2e.ts",
+    "**/*.e2e.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.spec.js",

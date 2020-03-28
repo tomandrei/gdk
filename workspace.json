@@ -142,10 +142,8 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:lint",
+          "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "linter": "eslint",
-            "config": "libs/ra-ui/.eslintrc",
             "tsConfig": [
               "libs/ra-ui/tsconfig.lib.json",
               "libs/ra-ui/tsconfig.spec.json"

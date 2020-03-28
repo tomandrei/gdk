@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
-import { GdkComponentTitle } from './gdk-component-title.interface';
+import { GdkComponentOnorific } from './gdk-component-onorific.interface';
 
 @Component({
   tag: 'gdk-component',
@@ -11,22 +11,22 @@ export class GdkComponent {
   /**
    * The title
    */
-  @Prop() title: GdkComponentTitle = GdkComponentTitle.MR;
+  @Prop() readonly onorific: GdkComponentOnorific = GdkComponentOnorific.MR;
 
   /**
    * The first name
    */
-  @Prop() first: string;
+  @Prop() readonly first: string;
 
   /**
    * The last name
    */
-  @Prop() last: string;
+  @Prop() readonly last: string;
 
   /**
    * The component styles {object}
    */
-  @Prop() styles: { [key: string]: string; };
+  @Prop() readonly styles: { [key: string]: string; };
 
   private getText(): string {
     return format(this.title, this.first, this.last);

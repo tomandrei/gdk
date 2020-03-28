@@ -7,7 +7,8 @@ export default function(schema: SchematicOptions): Rule {
   const dep = {};
   const devDep = {
     '@stencil/core': '^1.8.8',
-    '@stencil/sass': '^1.1.1'
+    '@stencil/sass': '^1.1.1',
+    "@stencil/eslint-plugin": "^0.3.1",
   };
   const install = true;
 

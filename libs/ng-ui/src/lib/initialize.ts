@@ -1,5 +1,7 @@
 import { NgZone } from '@angular/core';
-import { applyPolyfills, defineCustomElements } from '@gdk/st-ui/loader';
+
+// tslint:disable-next-line nx-enforce-module-boundaries
+import { applyPolyfills, defineCustomElements } from '@gdk/st-ui/loader'; // eslint-disable-line @nrwl/nx/enforce-module-boundaries
 
 import { raf } from './util/raf';
 

@@ -12,7 +12,8 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:@stencil/recommended"
   ],
   "rules": {
     "@typescript-eslint/explicit-member-accessibility": "off",

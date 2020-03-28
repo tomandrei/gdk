@@ -4,9 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { getAttributeKnobs } from '../../../../docs/attribute-knobs';
 import { getStyleKnobs } from '../../../../docs/style-knobs';
 
-/* tslint:disable */
-import { Gdk<%= classify(name) %> } from '@gdk/ra-ui';
-
+// tslint:disable-next-line nx-enforce-module-boundaries
+import { Gdk<%= classify(name) %> } from '@gdk/ra-ui'; // eslint-disable-line @nrwl/nx/enforce-module-boundaries
 
 storiesOf('Elements|Gdk<%= classify(name) %>', module)
   .add('Dynamic', () => {

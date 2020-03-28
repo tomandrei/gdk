@@ -9,9 +9,13 @@ enum Types {
     BOOLEAN = 'boolean'
 }
 
+export interface AttributeKnobs {
+    [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
 export const getAttributeKnobs = (name: string, setInitVal = {}) => {
     const key = 'Attributes';
-    const props = {};
+    const props: AttributeKnobs = {};
     const component: JsonDocsComponent = specs.components.filter(cmp => cmp.tag === name)[0];
 
     const setDefault = (prop, setInit) => prop.default && !Object.prototype.hasOwnProperty.call(setInit, prop.name) ? prop.default : setInit[prop.name];
