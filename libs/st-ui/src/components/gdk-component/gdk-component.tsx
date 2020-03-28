@@ -29,7 +29,7 @@ export class GdkComponent {
   @Prop() readonly styles: { [key: string]: string; };
 
   private getText(): string {
-    return format(this.title, this.first, this.last);
+    return format(this.onorific, this.first, this.last);
   }
 
   render() {

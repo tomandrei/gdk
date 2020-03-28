@@ -44,8 +44,8 @@ export function ProxyCmp(opts: { inputs?: any; methods?: any }) {
 import { Components } from '@gdk/st-ui'
 
 export declare interface GdkComponent extends Components.GdkComponent {}
-@ProxyCmp({inputs: ['first', 'last', 'styles', 'title']})
-@Component({ selector: 'gdk-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'styles', 'title'] })
+@ProxyCmp({inputs: ['first', 'last', 'onorific', 'styles']})
+@Component({ selector: 'gdk-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'onorific', 'styles'] })
 export class GdkComponent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

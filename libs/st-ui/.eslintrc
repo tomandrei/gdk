@@ -1,7 +1,6 @@
 {
   "extends": "../../.eslintrc",
   "rules": {
-    "no-unreachable": "warn",
     "@stencil/async-methods": "error",
     "@stencil/ban-prefix": ["error", ["stencil", "stnl", "st"]],
     "@stencil/decorators-context": "error",

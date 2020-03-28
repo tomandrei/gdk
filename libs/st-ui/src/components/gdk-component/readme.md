@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description                   | Type                                                                      | Default                |
-| -------- | --------- | ----------------------------- | ------------------------------------------------------------------------- | ---------------------- |
-| `first`  | `first`   | The first name                | `string`                                                                  | `undefined`            |
-| `last`   | `last`    | The last name                 | `string`                                                                  | `undefined`            |
-| `styles` | --        | The component styles {object} | `{ [key: string]: string; }`                                              | `undefined`            |
-| `title`  | `title`   | The title                     | `GdkComponentTitle.MISS \| GdkComponentTitle.MR \| GdkComponentTitle.MRS` | `GdkComponentTitle.MR` |
+| Property   | Attribute  | Description                   | Type                                                                               | Default                   |
+| ---------- | ---------- | ----------------------------- | ---------------------------------------------------------------------------------- | ------------------------- |
+| `first`    | `first`    | The first name                | `string`                                                                           | `undefined`               |
+| `last`     | `last`     | The last name                 | `string`                                                                           | `undefined`               |
+| `onorific` | `onorific` | The title                     | `GdkComponentOnorific.MISS \| GdkComponentOnorific.MR \| GdkComponentOnorific.MRS` | `GdkComponentOnorific.MR` |
+| `styles`   | --         | The component styles {object} | `{ [key: string]: string; }`                                                       | `undefined`               |
 
 
 ## CSS Custom Properties
