@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import RaUi from './ra-ui';
+import { GdkComponent } from './ra-ui';
 
-describe(' RaUi', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<RaUi />);
+describe(' ra-ui ', () => {
+  it('should render GdkComponent successfully', () => {
+    const { baseElement } = render(<GdkComponent />);
     expect(baseElement).toBeTruthy();
   });
 });

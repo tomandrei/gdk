@@ -11,10 +11,10 @@ const DIRECTIVES = [ GdkComponent ];
   declarations: DIRECTIVES,
   exports: DIRECTIVES
 })
-export class AngularLibModule {
+export class NgUiModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: AngularLibModule,
+      ngModule: NgUiModule,
       providers: [
         {
           provide: APP_INITIALIZER,
