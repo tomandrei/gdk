@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build-and-test:
+  install:
     executor:
       name: node/default
     steps:
@@ -10,8 +10,52 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm test
+  lint:
+    executor:
+      name: node/default
+    steps:
+      - node/with-cache:
+          steps:
+            - run: nx affected:lint
+            - run:  &&  && nx affected:build && nx affected:e2e
+            - run: npm run publish && npm run dockerize
+            - run: npm run tag
+            - run: npm run reports
+  test:
+    executor:
+      name: node/default
+    steps:
+      - node/with-cache:
+          steps:
+            - run: nx affected:test
+  build:
+    executor:
+      name: node/default
+    steps:
+      - node/with-cache:
+          steps:
+            - run: nx affected:build
+  integration:
+    executor:
+      name: node/default
+    steps:
+      - node/with-cache:
+          steps:
+            - run: nx affected:e2e
 workflows:
-    build-and-test:
+    install:
       jobs:
-        - build-and-test
+        - install
+        - lint:
+          -requires:
+            - install
+        - test:
+          -requires:
+            - install
+        - build:
+          -requires:
+            - install
+        - integration:
+          -requires:
+            - install
+
