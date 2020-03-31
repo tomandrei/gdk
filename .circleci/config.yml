@@ -39,7 +39,7 @@ jobs:
           steps:
             - run: nx affected:e2e
 workflows:
-    install:
+    buildster:
       jobs:
         - install
         - lint:
