@@ -17,10 +17,6 @@ jobs:
       - node/with-cache:
           steps:
             - run: nx affected:lint
-            - run:  &&  && nx affected:build && nx affected:e2e
-            - run: npm run publish && npm run dockerize
-            - run: npm run tag
-            - run: npm run reports
   test:
     executor:
       name: node/default
