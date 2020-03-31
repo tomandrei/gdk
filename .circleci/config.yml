@@ -10,7 +10,15 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+  lint:
+    executor:
+      name: node/default
+    steps: 
+      - node/with-cache:
+        steps:
+          - run: nx affected:lint
 workflows:
-    build-and-test:
+    buildster:
       jobs:
         - install
+        - lint
