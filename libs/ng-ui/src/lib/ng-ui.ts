@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
 import { fromEvent } from 'rxjs';
 
 export const proxyInputs = (Cmp: any, inputs: string[]) => {
@@ -47,9 +47,11 @@ export declare interface GdkComponent extends Components.GdkComponent {}
 @ProxyCmp({inputs: ['first', 'last', 'onorific', 'styles']})
 @Component({ selector: 'gdk-component', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['first', 'last', 'onorific', 'styles'] })
 export class GdkComponent {
+  persona!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['persona']);
   }
 }

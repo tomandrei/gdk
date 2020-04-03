@@ -50,6 +50,10 @@ declare namespace LocalJSX {
          */
         "last"?: string;
         /**
+          * Emit the persona Ex: Sr Will Smith
+         */
+        "onPersona"?: (event: CustomEvent<any>) => void;
+        /**
           * The title
          */
         "onorific"?: GdkComponentOnorific;

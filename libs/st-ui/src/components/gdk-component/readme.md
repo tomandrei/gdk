@@ -15,6 +15,13 @@
 | `styles`   | --         | The component styles {object} | `{ [key: string]: string; }`                                                       | `undefined`               |
 
 
+## Events
+
+| Event     | Description                        | Type               |
+| --------- | ---------------------------------- | ------------------ |
+| `persona` | Emit the persona Ex: Sr Will Smith | `CustomEvent<any>` |
+
+
 ## CSS Custom Properties
 
 | Name                    | Description                      |

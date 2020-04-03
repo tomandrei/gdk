@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
 import { format } from '../../utils/utils';
 import { GdkComponentOnorific } from './gdk-component-onorific.interface';
 
@@ -8,6 +8,11 @@ import { GdkComponentOnorific } from './gdk-component-onorific.interface';
   shadow: true
 })
 export class GdkComponent {
+  /**
+   * Emit the persona Ex: Sr Will Smith
+   */
+  @Event() persona: EventEmitter;
+
   /**
    * The title
    */
@@ -32,6 +37,10 @@ export class GdkComponent {
     return format(this.onorific, this.first, this.last);
   }
 
+  private nameEmitHandler() {
+    this.persona.emit(this.getText());
+  }
+
   render() {
     const rootClasses = {
       ['gdk-component']: true
@@ -41,6 +50,6 @@ export class GdkComponent {
       class: rootClasses
     }
 
-    return <div {...props}>Hello, World! I'm {this.getText()}</div>;
+    return <div {...props} onClick={() => this.nameEmitHandler()}>Hello, World! I'm {this.getText()}</div>;
   }
 }

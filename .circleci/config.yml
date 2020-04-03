@@ -1,16 +1,107 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
 jobs:
   install:
-    executor:
-      name: node/default
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
+      - run: npm install
+      - save_cache:
+          key: installed_modules
+          paths:
+            - ~/workspace
+  lint:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - restore_cache:
+          key: installed_modules
+      - run: echo lint
+      - run: ~/workspace/node_modules/.bin/nx affected:lint
+  build:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - restore_cache:
+          key: installed_modules
+      - run: ~/workspace/node_modules/.bin/nx affected:build
+  test:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - restore_cache:
+          key: installed_modules
+      - run: ~/workspace/node_modules/.bin/nx affected:test
+  e2e:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - restore_cache:
+          key: installed_modules
+      - run: ~/workspace/node_modules/.bin/nx affected:e2e
+  dockerize:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - run: echo dockerize
+  publish:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - run: echo publish
+  tag:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - run: echo tag
+  reports:
+    docker:
+      - image: circleci/node:12.14
+    working_directory: ~/workspace
+    steps:
+      - run: echo reports
 workflows:
-    buildster:
-      jobs:
-        - install
+  version: 2
+  buildster:
+    jobs:
+      - install
+      - lint:
+          requires:
+            - install
+      - build:
+          requires:
+            - install
+      - test:
+          requires:
+            - install
+      - e2e:
+          requires:
+            - install
+      - dockerize:
+          requires:
+            - lint
+            - build
+            - test
+            - e2e
+      - publish:
+          requires:
+            - lint
+            - build
+            - test
+            - e2e
+      - tag:
+          requires:
+            - dockerize
+            - publish
+      - reports:
+          requires:
+            - test
+            - e2e
