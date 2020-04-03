@@ -19,6 +19,7 @@ jobs:
       - restore_cache:
           key: codebase-{{ .BuildNum }}
       - run: echo lint
+      - run: ls
       - run: ~/workspace/node_modules/.bin/nx affected:lint
   build:
     docker:
