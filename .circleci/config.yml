@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: npm install
       - save_cache:
-          key: codebase-{{ epoch }}
+          key: codebase-{{ .BuildNum }}
           paths:
             - ~/workspace
   lint:
@@ -17,7 +17,7 @@ jobs:
     working_directory: ~/workspace
     steps:
       - restore_cache:
-          key: codebase-{{ epoch }}
+          key: codebase-{{ .BuildNum }}
       - run: echo lint
       - run: ~/workspace/node_modules/.bin/nx affected:lint
   build:
@@ -26,7 +26,7 @@ jobs:
     working_directory: ~/workspace
     steps:
       - restore_cache:
-          key: codebase-{{ epoch }}
+          key: codebase-{{ .BuildNum }}
       - run: ~/workspace/node_modules/.bin/nx affected:build
   test:
     docker:
@@ -34,7 +34,7 @@ jobs:
     working_directory: ~/workspace
     steps:
       - restore_cache:
-          key: codebase-{{ epoch }}
+          key: codebase-{{ .BuildNum }}
       - run: ~/workspace/node_modules/.bin/nx affected:test
   e2e:
     docker:
@@ -42,7 +42,7 @@ jobs:
     working_directory: ~/workspace
     steps:
       - restore_cache:
-          key: codebase-{{ epoch }}
+          key: codebase-{{ .BuildNum }}
       - run: ~/workspace/node_modules/.bin/nx affected:e2e
   dockerize:
     docker:
