@@ -1,8 +1,5 @@
 # GDK
 
-[![CircleCI](https://circleci.com/gh/geeksterio/gdk.svg?style=svg)](https://circleci.com/gh/geeksterio/gdk)
-![GitHub](https://img.shields.io/github/license/geeksterio/gdk)
-
 Geekster Development Kit is a development toolkit using nx monorepo, stenciljs, storybook, angular, react etc.
 
 - [Install](#install)
